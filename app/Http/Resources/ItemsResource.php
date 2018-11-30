@@ -13,11 +13,10 @@ class ItemsResource extends JsonResource
     {
        
         return [
-            'id' => $this->id,
-            'dish_id' => $this->dish_id,
-            'payment_id' => $this->payment_id,
+            'id' => $this->id, 
             'qtd' => $this->qtd,
             'value' => $this->value,
+            'payment_id' => $this->payment_id,
             'user_id' => $this->user_id,
             'payment' => new PaymentResource($this->payment)
             

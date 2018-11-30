@@ -2,7 +2,7 @@
 
 namespace App\Http\Resources;
 
-use App\Models\Items;
+use App\Models\Item;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class PaymentItemCollection extends ResourceCollection
@@ -17,8 +17,7 @@ class PaymentItemCollection extends ResourceCollection
 
     public function toArray($request)
     {
-        return [
-           
+        return [           
             'payment' => new PaymentResource($this->payment),
             'items' => $this->collection->map(function ($item) {
                 return new ItemsResource($item);

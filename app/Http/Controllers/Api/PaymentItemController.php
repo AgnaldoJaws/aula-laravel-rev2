@@ -10,9 +10,10 @@ use App\Models\Payment;
 class PaymentItemController extends Controller
 {
     public function index(Payment $payment)
-    {
+    {        
         $items = $payment->items()->paginate();        
         return new PaymentItemCollection($items, $payment);
+        
     }
 
    

@@ -13,7 +13,9 @@ class PaymentResource extends JsonResource
         return [
             'id' => $this->id,
             'method' => $this->method,
-            'total' => $this->total
+            'hash' => $this->hash,
+            'total' => $this->total,
+            'token' => $this->token
         ];
     }
 }

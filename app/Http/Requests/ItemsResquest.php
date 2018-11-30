@@ -17,11 +17,9 @@ class ItemsRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'required|max:255',
-            'dish_id' => 'required|max:255',            
+             
             'qtd' => 'required|max:255',
-            'value' => 'required|max:255',
-            'user_id' => 'required|max:255',                                  
+            'value' => 'required|max:255',                                          
             'payment_id' => [
                 'required',
                 (new Exists('payments','id'))

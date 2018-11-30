@@ -9,11 +9,10 @@ class Payment extends Model
 {
     use TenantModels;
     
-    protected $fillable = ['id','method','total'];
+    protected $fillable = ['hash','token','method','total'];
 
-    public function items(){    
-        
-        return $this->hasMany(Items::class);
+    public function items(){        
+       return $this->hasMany(Item::class);       
     }
 
     

@@ -3,7 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\ResourceCollection;
-use App\Models\Items;
+use App\Models\Item;
 
 class ItemCollection extends ResourceCollection
 {
